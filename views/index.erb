@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
-    <title>Cover Template for Bootstrap</title>
+    <title>Mojo Healing</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -64,13 +64,34 @@
     </div>
 
     <div class="container">
-      <div class="col-md-5 col-md-offset-4">
-        <h1 class="header-title">About Reiki:</h1>
-      </div>
 
-      <div class="col-md-12">
-        <p class="description">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
-      </div>
+      <div class ="testimonials">
+        <div class="col-md-6 col-md-offset-3">
+          <h1 class="header-title">Testimonials:</h1>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <% @testimonials.each do |testimonial| %>
+            <div class="well">
+              <p class="testimonial">"<%= testimonial[:testimonial] %>"</p>
+              <p class="description">-<%= testimonial[:name] %></p>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2 well">
+          <form action="/testimonial" method="post">
+            <input name="name" type="text" placeholder="Type your name" class="name-input" required>
+            <div>
+              <textarea name="testimonial" placeholder="Type your testimonial" class="testimonial-input" required></textarea>
+            </div>
+            <div>
+              <input type="submit" class="btn btn-lg btn-primary">
+            </div>
+          </form>
+        </div>
+      </div> <!-- testimonials -->
+
     </div>
 
     <!-- Bootstrap core JavaScript
