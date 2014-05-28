@@ -68,6 +68,8 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .masthead-nav > li {
@@ -80,7 +82,7 @@ body {
   padding-right: 0;
   padding-left: 0;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 400;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;

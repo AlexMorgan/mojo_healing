@@ -4,7 +4,8 @@ body {
 }
 
 .header-title {
-    font-size: 5em;
+    font-size: 4em;
+    font-weight: 300;
     color: #0b99bc;
     margin-top: 100px;
     margin-bottom: 50px;
@@ -42,3 +43,29 @@ body {
 .cover {
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
+
+.about-pic {
+  border-style: none;
+  border-radius: 150px;
+  height: 300px;
+  width: 300px;
+}
+
+form {
+  color: #0b99bc;
+}
+
+.about img {
+  margin-bottom: 40px;
+}
+
+.about-text {
+  color: #c4c4c4;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.learn {
+  font-weight: 400;
+}
+
