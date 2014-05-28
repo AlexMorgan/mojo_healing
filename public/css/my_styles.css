@@ -1,11 +1,13 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  text-shadow: none;
 }
 
 .header-title {
     font-size: 5em;
     color: #0b99bc;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .navbar {
@@ -20,4 +22,23 @@ body {
 
 .home-button {
   width: 150px;
+}
+
+.name-input {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-input {
+  height: 250px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial {
+  color: #0b99bc;
+}
+
+.cover {
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
