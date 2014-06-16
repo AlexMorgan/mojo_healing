@@ -24,6 +24,11 @@ get '/' do
   erb  :index
 end
 
+get '/testimonial' do
+  @testimonials = read_from_csv('testimonials.csv')
+  erb :'/testimonials/index'
+end
+
 post '/testimonial' do
   name = params['name']
   testimonial = params['testimonial']

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+
+    <title>Mojo Healing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="css/cover.css" rel="stylesheet"> -->
+    <link href="css/my_styles.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <div id="testimonials" class ="testimonials">
+        <div class="col-md-6 col-md-offset-4">
+          <h1 class="header-title">Testimonials:</h1>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1 quotes">
+          <% @testimonials.each do |testimonial| %>
+            <div class="well quote">
+              <p class="testimonial">"<%= testimonial[:testimonial] %>"</p>
+              <p class="description">-<%= testimonial[:name] %></p>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-md-6 col-md-offset-4">
+          <h1 class="write-title" >Write your own:</h1>
+        </div>
+
+        <div class="col-md-6 col-md-offset-3 well">
+          <form action="/testimonial" method="post">
+            <input name="name" type="text" placeholder="Type your name" class="name-input" required>
+            <div>
+              <textarea name="testimonial" placeholder="Type your testimonial" class="testimonial-input" required></textarea>
+            </div>
+            <div>
+              <input type="submit" class="btn btn-md btn-primary">
+              <a href="/" class="btn btn-md btn-danger">Home</a>
+            </div>
+          </form>
+        </div>
+      </div> <!-- testimonials -->
+    </div>
+  </body>
+  </html>

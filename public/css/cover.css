@@ -48,8 +48,10 @@ body {
   display: table-cell;
   vertical-align: top;
   background-image: url('../assets/reiki3_blur.jpg');
-  background-size: 100% 100%;
+  background-size: auto 100%;
+  background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .cover-container {
   margin-right: auto;

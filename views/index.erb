@@ -31,7 +31,7 @@
 
   <body>
 
-    <div class="site-wrapper">
+    <div class="site-wrapper" id="top">
 
       <div class="site-wrapper-inner">
 
@@ -42,9 +42,9 @@
               <h3 class="masthead-brand">Mojo Healing</h3>
               <ul class="nav masthead-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="/about">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Testimonials</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -53,7 +53,7 @@
             <h1 class="cover-heading">Reiki Healing</h1>
             <p class="lead">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
             <p class="lead">
-              <a href="#" class="btn btn-lg btn-default"><span class="learn">Learn more</span></a>
+              <a href="#about" class="btn btn-lg btn-default about-reiki"><span>Learn more</span></a>
             </p>
           </div>
 
@@ -64,7 +64,14 @@
     </div>
 
     <div class="container">
-      <div class="about">
+      <!-- Back to Top link -->
+      <p id="back-top" class="col-xs-2 col-xs-offset-9">
+        <a href="#top" class="visible-lg"><span></span>Back to Top</a>
+      </p>
+    </div>
+    <!-- About -->
+    <div class="container">
+      <div class="about-reiki" id="about">
         <div class="col-md-6 col-md-offset-3">
           <h1 class="header-title">About:</h1>
         </div>
@@ -79,34 +86,43 @@
           </p>
         </div>
       </div>
+    </div>
 
-      <div class ="testimonials">
+    <!-- Testimonials -->
+    <div class="container">
+      <div id="testimonials" class ="testimonials">
         <div class="col-md-6 col-md-offset-3">
           <h1 class="header-title">Testimonials:</h1>
         </div>
 
-        <div class="col-md-10 col-md-offset-1">
-          <% @testimonials.each do |testimonial| %>
-            <div class="well">
-              <p class="testimonial">"<%= testimonial[:testimonial] %>"</p>
-              <p class="description">-<%= testimonial[:name] %></p>
-            </div>
-          <% end %>
+        <div class="row quote-pics">
+          <div class="col-md-4">
+            <img src="assets/reiki1.jpg" class="about-pic">
+          </div>
+          <div class="col-md-4">
+            <img src="assets/reiki4.jpg" class="about-pic">
+          </div>
+          <div class="col-md-4">
+            <img src="assets/reiki3.jpg" class="about-pic">
+          </div>
         </div>
 
-        <div class="col-md-8 col-md-offset-2 well">
-          <form action="/testimonial" method="post">
-            <input name="name" type="text" placeholder="Type your name" class="name-input" required>
-            <div>
-              <textarea name="testimonial" placeholder="Type your testimonial" class="testimonial-input" required></textarea>
-            </div>
-            <div>
-              <input type="submit" class="btn btn-lg btn-primary">
-            </div>
-          </form>
+        <div class="row">
+          <div class="col-md-4">
+            <p class="quote-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+          </div>
+          <div class="col-md-4">
+            <p class="quote-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+          </div>
+          <div class="col-md-4">
+            <p class="quote-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+          </div>
+        </div>
+
+        <div class="col-md-1 col-md-offset-8">
+          <a href="/testimonial" class="btn btn-md btn-primary more"><span>View More</span></a>
         </div>
       </div> <!-- testimonials -->
-
     </div>
 
     <!-- Bootstrap core JavaScript
@@ -115,5 +131,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
   </body>
 </html>

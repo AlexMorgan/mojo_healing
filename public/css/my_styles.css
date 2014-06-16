@@ -11,6 +11,14 @@ body {
     margin-bottom: 50px;
 }
 
+.write-title {
+    font-size: 4em;
+    font-weight: 300;
+    color: #0b99bc;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .navbar {
   height: 80px;
   margin-bottom: 80px;
@@ -26,18 +34,27 @@ body {
 }
 
 .name-input {
-  width: 50%;
+  width: 100%;
   margin-bottom: 10px;
 }
 
 .testimonial-input {
   height: 250px;
-  width: 50%;
+  width: 100%;
   margin-bottom: 10px;
+}
+
+.testimonials .quotes{
+  text-align: center;
 }
 
 .testimonial {
   color: #0b99bc;
+  margin-bottom: 30px;
+}
+
+.quote {
+  margin-bottom: 30px;
 }
 
 .cover {
@@ -51,11 +68,19 @@ body {
   width: 300px;
 }
 
+.testimonial-pic {
+  border-style: none;
+  border-radius: 150px;
+  height: 250px;
+  width: 250px;
+  margin-left: 40px;
+}
+
 form {
   color: #0b99bc;
 }
 
-.about img {
+.about-reiki img {
   margin-bottom: 40px;
 }
 
@@ -69,3 +94,54 @@ form {
   font-weight: 400;
 }
 
+.testimonials .more{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+/**************** Scroll Top ******************/
+
+#back-top {
+  position: fixed;
+  bottom: 30px;
+  margin-right: 150px;
+}
+
+#back-top a {
+  width: 108px;
+  display: block;
+  text-align: center;
+  font: 11px/100% Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #bbb;
+
+  /* transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover {
+  color: #0b99bc;
+}
+
+/* arrow icon (span tag) */
+#back-top span {
+  /* transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover span {
+  background-color: #777;
+}
+
+.quote-text {
+  font-weight: 300;
+  font-size: 1em;
+  color: #c4c4c4;
+}
+
+.quote-pics {
+  margin-bottom: 50px;
+}
